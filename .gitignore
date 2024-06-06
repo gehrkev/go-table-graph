@@ -103,3 +103,10 @@ fabric.properties
 
 # Mac
 .DS_Store
+
+# Compiled program
+table-graph
+
+# Png and dot files made by the program
+*.dot
+*.png
