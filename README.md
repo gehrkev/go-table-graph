@@ -6,7 +6,7 @@
 
 ## Requirements
 
-- **Go Programming Language**: Make sure you have Go installed on your system. You can download it from [golang.org](https://golang.org/dl/).
+- **Go Programming Language**: Make sure you have Go installed on your system. You can download it from [go.dev](https://go.dev/dl/).
 
 - **Graphviz**: You need Graphviz installed on your system to convert the DOT file to PNG format. Graphviz can be downloaded from [graphviz.org](https://graphviz.org/download/).
 
