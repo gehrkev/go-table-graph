@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ER Diagram</title>
     <style>
-        #mynetwork {
+        #er-diagram {
             width: 100%;
             height: 800px;
             border: 1px solid lightgray;
@@ -33,11 +33,11 @@
     <button type="submit">Generate ER Diagram</button>
 </form>
 
-<div id="mynetwork"></div>
+<div id="er-diagram"></div>
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
-        const container = document.getElementById('mynetwork');
+        const container = document.getElementById('er-diagram');
         const options = {
             layout: {
                 hierarchical: {
