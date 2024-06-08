@@ -26,6 +26,7 @@ func (n LabeledNode) Attributes() []encoding.Attribute {
 		{Key: "fillcolor", Value: "#D3D3D3"}, // Fill color
 		{Key: "fontname", Value: "Arial"},    // Font name
 		{Key: "fontsize", Value: "12"},       // Font size
+		{Key: "penwidth", Value: "1.0"},      // Border width
 	}
 }
 
