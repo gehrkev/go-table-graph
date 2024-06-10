@@ -1,59 +1,50 @@
+
 # go-table-graph
 
 ## Overview
 
-`go-table-graph` is a Go CLI tool to generate and visualize database table relationships as an ER diagram using Graphviz's DOT tool. It connects to PostgreSQL databases, extracts table structures and foreign key relationships, and outputs an ER diagram in PNG format.
+````go-table-graph```` is a web application written in Go that allows you to visualize database table relationships as an Entity-Relationship (ER) diagram. It connects to local PostgreSQL databases, extracts table structures, and renders the ER diagram using the vis-network JavaScript library for interactive visualization.
 
 ## Requirements
 
-- **Go Programming Language**: Make sure you have Go installed on your system. You can download it from [go.dev](https://go.dev/dl/).
+- **Go**: Ensure that you have Go installed on your system. You can download it from [go.dev](https://go.dev/dl/).
 
-- **Graphviz**: You need Graphviz installed on your system to convert the DOT file to PNG format. Graphviz can be downloaded from [graphviz.org](https://graphviz.org/download/).
+- **PostgreSQL Database**: You need access to a local PostgreSQL database to connect to and extract table relationships.
 
-## Usage
+## Installation and Setup
 
-### Running with `go run`
+### Clone the Repository
 
-1. Clone the repository:
+```bash
+git clone https://github.com/gehrkev/go-table-graph.git
+cd go-table-graph
+```
 
-   ```bash
-   git clone https://github.com/yourusername/go-table-graph.git
-   cd go-table-graph
-   ```
+### Build and Run
 
-2. Execute the program using `go run`:
-
-   ```bash
-   go run main.go database.go graph.go dot.go
-   ```
-
-   Follow the prompts to enter your database username and database name.
-
-### Compiling with `go build`
-
-1. Clone the repository (if not already cloned):
-
-   ```bash
-   git clone https://github.com/yourusername/go-table-graph.git
-   cd go-table-graph
-   ```
-
-2. Compile the program:
+1. Build the executable:
 
    ```bash
    go build -o go-table-graph
    ```
 
-   This will create an executable named `go-table-graph` in the current directory.
-
-4. Run the compiled executable:
+2. Run the application:
 
    ```bash
    ./go-table-graph
    ```
 
-   Follow the prompts to enter your database username and database name.
+3. Open your web browser and go to `http://localhost:8080` to access the application.
 
-### Example
+## Usage
 
-After running the program, it will generate an ER diagram in PNG format (`er_diagram.png`) based on your PostgreSQL database schema.
+1. Enter your PostgreSQL database username and database name in the input fields.
+2. Click on **Generate ER Diagram** to fetch and visualize the database schema.
+
+
+## External Libraries Used
+
+- **[gin](https://github.com/gin-gonic/gin)**: Gin is a HTTP web framework written in Go (Golang).
+- **[pq](https://github.com/lib/pq)**: Pure Go Postgres driver for database/sql.
+- **[vis-network](https://github.com/visjs/vis-network)**: 💫 Display dynamic, automatically organised, customizable network views.
+
