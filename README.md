@@ -38,7 +38,7 @@ cd go-table-graph
 
 ## Usage
 
-1. Enter your PostgreSQL database username and database name in the input fields.
+1. Enter your PostgreSQL database username, password and database name in the input fields.
 2. Click on **Generate ER Diagram** to fetch and visualize the database schema.
 
 
