@@ -25,12 +25,13 @@ func main() {
 func handleERDiagramRequest(c *gin.Context) {
 	username := c.Query("username")
 	dbname := c.Query("dbname")
-	if username == "" || dbname == "" {
+	password := c.Query("password")
+	if username == "" || dbname == "" || password == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "username and dbname are required"})
 		return
 	}
 
-	tables, foreignKeys, err := ExtractERDiagram(username, dbname)
+	tables, foreignKeys, err := ExtractERDiagram(username, password, dbname)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

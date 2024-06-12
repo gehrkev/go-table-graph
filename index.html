@@ -33,6 +33,7 @@
 <body>
 <form id="inputForm">
     <input type="text" id="username" name="username" placeholder="Enter database username" required>
+    <input type="password" id="password" name="password" placeholder="Enter user password" required>
     <input type="text" id="dbname" name="dbname" placeholder="Enter database name" required>
     <button type="submit">Generate ER Diagram</button>
 </form>
@@ -79,8 +80,9 @@
 
             const username = document.getElementById('username').value;
             const dbname = document.getElementById('dbname').value;
+            const password = document.getElementById(('password').value);
 
-            fetch(`/api/erdiagram?username=${encodeURIComponent(username)}&dbname=${encodeURIComponent(dbname)}`)
+            fetch(`/api/erdiagram?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&dbname=${encodeURIComponent(dbname)}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');

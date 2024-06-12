@@ -100,8 +100,8 @@ func extractForeignKeys(db *sql.DB) ([]ForeignKey, error) {
 
 // ExtractERDiagram connects to the database using provided username and dbname,
 // extracts tables and foreign key relationships, and returns them.
-func ExtractERDiagram(username, dbname string) ([]Table, []ForeignKey, error) {
-	connStr := fmt.Sprintf("user=%s dbname=%s sslmode=disable", username, dbname)
+func ExtractERDiagram(username, password, dbname string) ([]Table, []ForeignKey, error) {
+	connStr := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", username, password, dbname)
 	fmt.Println("Connecting to database with:", connStr)
 
 	db, err := sql.Open("postgres", connStr)
