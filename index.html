@@ -80,7 +80,7 @@
 
             const username = document.getElementById('username').value;
             const dbname = document.getElementById('dbname').value;
-            const password = document.getElementById(('password').value);
+            const password = document.getElementById('password').value;
 
             fetch(`/api/erdiagram?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&dbname=${encodeURIComponent(dbname)}`)
                 .then(response => {
