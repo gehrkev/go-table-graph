@@ -105,7 +105,7 @@ fabric.properties
 .DS_Store
 
 # Compiled program
-table-graph
+go-table-graph
 
 # Png and dot files made by the program
 *.dot
